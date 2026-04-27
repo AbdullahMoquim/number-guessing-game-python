@@ -19,4 +19,34 @@ def main():
     secret_number = random.randint(1, 100)
   else:
     secret_number = random.randint(1, 200)
+  
+  attempts = 0 
+  guess = int(input("Enter your guess: "))
+  while guess != secret_number:
+    attempts += 1
+    if guess > secret_number:
+      print ("Too high")
+    else:
+      print ("Too low")
+
+    guess = int(input("Enter your guess: "))
+
+  attempts += 1
+  print("Correct!")
+  print(f"Number of attempts: {attempts}")
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+if __name__ == "__main__":
+  main()
