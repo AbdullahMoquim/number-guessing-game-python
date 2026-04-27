@@ -1,6 +1,6 @@
 import random
 
-def main()
+def main():
   print("""
   Welcome to the Number Guessing Game!
       Game Features:
