@@ -12,3 +12,11 @@ def main():
       6. Replay after the game ends.
   """)
   
+  difficulty = input("Choose a difficulty (Easy, Medium, Hard): ").lower()
+  if difficulty == "easy":
+    secret_number = random.randint(1, 50)
+  elif difficulty == "medium":
+    secret_number = random.randint(1, 100)
+  else:
+    secret_number = random.randint(1, 200)
+    
