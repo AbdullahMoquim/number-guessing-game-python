@@ -15,25 +15,32 @@ def main():
   difficulty = input("Choose a difficulty (Easy, Medium, Hard): ").lower()
   if difficulty == "easy":
     secret_number = random.randint(1, 50)
+    max_attempts = 10
   elif difficulty == "medium":
     secret_number = random.randint(1, 100)
+    max_attempts = 8
   else:
     secret_number = random.randint(1, 200)
+    max_attempts = 6
   
   attempts = 0 
   guess = int(input("Enter your guess: "))
-  while guess != secret_number:
+  while guess != secret_number and attempts < max_attempts:
     attempts += 1
     if guess > secret_number:
       print ("Too high")
-    else:
-      print ("Too low")
+    elif guess < secret_number:
+      print("Too low")
 
     guess = int(input("Enter your guess: "))
 
   attempts += 1
-  print("Correct!")
-  print(f"Number of attempts: {attempts}")
+  if guess == secret_number:
+    print("Correct!")
+    print(f"Number of attempts:{attempts}")
+  else:
+    print("You ran out of attempts!")
+    print(f"The correct number was:{secret_number}")
     
 
 
