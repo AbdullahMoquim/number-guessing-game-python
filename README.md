@@ -29,5 +29,5 @@ This project is a Number Guessing Game created in Python. The player chooses a d
 ## Files Included
 
 - `number_guessing_game.py` - Main game source code
-- `CMPSC132_Final_Project_Report.pdf` - Final project report
+- `CMPSC 132 Final Project Report` - Final project report
 - `README.md` - Project overview
