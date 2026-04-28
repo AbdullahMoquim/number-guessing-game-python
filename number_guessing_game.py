@@ -44,34 +44,35 @@ def main():
     if guess == secret_number:
       print("Correct!")
       print(f"Number of attempts:{attempts}")
+
+      if attempts <= 3:
+        print("Excellent performance. Think you can keep it up?")
+      elif attempts <= 6:
+        print("Good job")
+      else:
+        print("You got it, but that was close!")
+
       wins += 1
+
+      if attempts < best_score:
+        best_score = attempts
     else:
       print("You ran out of attempts!")
       print(f"The correct number was:{secret_number}")
     
-    if attempts < best_score:
-      best_score = attempts
     play_again = input("Do you want to play again? (yes/no): ").lower()
 
   print("Thanks for playing!")
+  
   print(
     f"Games Played: {games_played}\n"
     f"Wins: {wins}\n"
-    f"Best score: {best_score}"
-  )
-    
-
-
-
-
-
-
-
-
-
-
-
-
+    )
+  if wins > 0:
+    print(f"Best score: {best_score}")
+  else:
+    print("Best score: no wins yet")
+  
 
 if __name__ == "__main__":
   main()
